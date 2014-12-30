@@ -4,17 +4,16 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>swift语法 | OG14 Blog</title>
+    <title>基于instrument-Automation的IOS应用UI自动化测试脚本（一） | OG14 Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="wangjun">
     
-    <meta name="description" content="swift语言诞生已经好久了，但是由于时间关系一直没有使用，发现身边的小伙伴都已经开始使用其开发项目了，决定从现在开始，要全部转移到swift开发上面。好久没有写博客了，从本文开始也开始恢复我的博客。
-主要是阐述swift基本的语法，主要是OC进行对比。
+    <meta name="description" content="本文主要说明Xcode自带的automatuon测试化脚本工具，是苹果官方推荐使用的，下面是使用instruments的原因：
 
-变量的定义
-类和对象的定义
-基本类型的互相">
+测试工具和测试文档是苹果维护，并且从xcode 4.0就推出了此工具，目前修改的比较成熟
+无需特殊的代码工作，可以直接对app进行测试，可以直接设备和模拟器测试
+支持录制">
     
     
     
@@ -76,14 +75,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/12/17/第一篇博客/" title="swift语法" itemprop="url">swift语法</a>
+      <a href="/2014/12/30/ios-instruments/" title="基于instrument-Automation的IOS应用UI自动化测试脚本（一）" itemprop="url">基于instrument-Automation的IOS应用UI自动化测试脚本（一）</a>
   </h1>
   <p class="article-author">By
        
 		<a href="http://www.og14.com/about" title="wangjun" target="_blank" itemprop="author">wangjun</a>
 		
   <p class="article-time">
-    <time datetime="2014-12-17T11:57:35.000Z" itemprop="datePublished"> Published Dec 17 2014</time>
+    <time datetime="2014-12-30T06:36:44.000Z" itemprop="datePublished"> Published Dec 30 2014</time>
     
   </p>
 </header>
@@ -96,25 +95,22 @@
 		
 		</div>
 		
-		<p>swift语言诞生已经好久了，但是由于时间关系一直没有使用，发现身边的小伙伴都已经开始使用其开发项目了，决定从现在开始，要全部转移到swift开发上面。好久没有写博客了，从本文开始也开始恢复我的博客。</p>
-<p>主要是阐述swift基本的语法，主要是OC进行对比。</p>
+		<p>本文主要说明Xcode自带的automatuon测试化脚本工具，是苹果官方推荐使用的，下面是使用instruments的原因：</p>
 <ul>
-<li>变量的定义</li>
-<li>类和对象的定义</li>
-<li>基本类型的互相转化</li>
-<li>方法的定义</li>
+<li>测试工具和测试文档是苹果维护，并且从xcode 4.0就推出了此工具，目前修改的比较成熟</li>
+<li>无需特殊的代码工作，可以直接对app进行测试，可以直接设备和模拟器测试</li>
+<li>支持录制</li>
 </ul>
-<p>最简单的一句话：</p>
-<p><code><br>println(“hello swift”)<br></code></p>
-<p>常量和常量的定义：</p>
-<p>Swift终于也可以不用区分类型了，直接就两种:</p>
-<ul>
-<li>let 类型，是常量 定义之后就不能修改了（我理解是final）</li>
-<li>var类型，是变量 可以根据赋值来转为相应的类型</li>
-</ul>
-<p>类和对象的定义</p>
-<p>基础类型的互相转化</p>
-<p>方法的定义和使用</p>
+<p>下面用一个非常简单的例子说明怎么使用：</p>
+<p>1、首先Xcode-&gt;Product-&gt;Profile</p>
+<p><img src="http://7sbymf.com1.z0.glb.clouddn.com/QQ20141230-1.png" alt=""></p>
+<p>2、点击进入到相应的页面</p>
+<p><img src="http://7sbymf.com1.z0.glb.clouddn.com/QQ20141230-2.png" alt=""></p>
+<p>3、点击录制按钮，可以开始app，操作界面可以录制成相应的js脚本</p>
+<p><img src="http://7sbymf.com1.z0.glb.clouddn.com/QQ20141230-3.png" alt=""></p>
+<p>4、录制结束之后，点击结束。</p>
+<p>5、点击开始，可以显示出脚本运行的结果</p>
+<p>录制出来的js不能作为测试的js使用，因为没有错误情况的判断，如果想要使用，必须自己手动添加相应的代码。手动代码部分，下一篇继续说明</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -127,7 +123,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://www.og14.com/2014/12/17/第一篇博客/" data-title="swift语法 | OG14 Blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://www.og14.com/2014/12/30/ios-instruments/" data-title="基于instrument-Automation的IOS应用UI自动化测试脚本（一） | OG14 Blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -140,14 +136,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2014/12/30/ios-instruments/" title="基于instrument-Automation的IOS应用UI自动化测试脚本（一）">
-  <strong>上一篇：</strong><br/>
-  <span>
-  基于instrument-Automation的IOS应用UI自动化测试脚本（一）</span>
+
+<div class="next">
+<a href="/2014/12/17/第一篇博客/"  title="swift语法">
+ <strong>下一篇：</strong><br/> 
+ <span>swift语法
+</span>
 </a>
 </div>
-
 
 </nav>
 
